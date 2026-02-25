@@ -1,7 +1,7 @@
 import { motion } from "framer-motion"; // eslint-disable-line no-unused-vars
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
-import "./Signup.css";
+import "./signup.css";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 

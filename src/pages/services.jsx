@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from "../components/navbar";
 import LocationCard from "../components/locationCard";
 import Footer from "../components/footer";
-import "./Services.css";
+import "./services.css";
 
 function Services() {
   return (
