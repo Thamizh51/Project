@@ -1,0 +1,241 @@
+/* ============================= */
+/*        BRAND COLORS           */
+/* ============================= */
+:root {
+  --primary-yellow: #facc15;
+  --soft-yellow: #fef9c3;
+  --dark-text: #111;
+  --light-bg: #f9fafb;
+}
+
+.homepage {
+  padding-top: 0px;
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+}
+
+/* ============================= */
+/*          HERO SECTION         */
+/* ============================= */
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px 10%;
+  background: linear-gradient(
+    135deg,
+    var(--soft-yellow) 0%,
+    #ffffff 60%
+  );
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.hero-content {
+  flex: 1;
+  min-width: 300px;
+}
+
+.hero-content h1 {
+  font-size: 42px;
+  margin-bottom: 20px;
+  color: var(--dark-text);
+}
+
+.hero-content p {
+  font-size: 18px;
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 25px;
+}
+
+/* HERO IMAGE FIX */
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 450px;   /* 🔥 limits image size */
+  height: auto;
+  object-fit: contain;
+  border-radius: 14px;
+  box-shadow: 0 15px 40px rgba(250, 204, 21, 0.25);
+  transition: 0.4s ease;
+}
+
+.hero-image img:hover {
+  transform: scale(1.04);
+}
+
+/* ============================= */
+/*          BUTTONS              */
+/* ============================= */
+.invest-btn,
+.cta-btn {
+  display: inline-block;
+  padding: 13px 30px;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s ease;
+  border: 2px solid var(--primary-yellow);
+  background: var(--primary-yellow);
+  color: var(--dark-text);
+}
+
+.invest-btn:hover,
+.cta-btn:hover {
+  background: var(--dark-text);
+  color: white;
+  box-shadow: 0 10px 25px rgba(250, 204, 21, 0.4);
+}
+
+/* ============================= */
+/*          ABOUT SECTION        */
+/* ============================= */
+.about-preview {
+  display: flex;
+  padding: 90px 10%;
+  align-items: center;
+  gap: 50px;
+  flex-wrap: wrap;
+  background: #fff;
+}
+
+.about-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 400px;  /* 🔥 fixed about image */
+  height: auto;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.about-content {
+  flex: 1;
+  min-width: 300px;
+}
+
+.about-content h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+/* ============================= */
+/*        SERVICES SECTION       */
+/* ============================= */
+.services-section {
+  padding: 90px 10%;
+  text-align: center;
+  background: var(--soft-yellow);
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.service-card {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  transition: 0.3s ease;
+  border: 1px solid #eee;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(250, 204, 21, 0.3);
+}
+
+/* ============================= */
+/*          WHY SECTION          */
+/* ============================= */
+.why-section {
+  padding: 90px 10%;
+  text-align: center;
+  background: white;
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 40px;
+}
+
+/* ============================= */
+/*          CTA SECTION          */
+/* ============================= */
+.cta-section {
+  padding: 90px 10%;
+  text-align: center;
+  background: linear-gradient(
+    135deg,
+    var(--primary-yellow),
+    #fbbf24
+  );
+  color: var(--dark-text);
+}
+
+.cta-btn {
+  background: #111;
+  color: white;
+  border: none;
+  margin-top: 20px;
+}
+
+.cta-btn:hover {
+  background: white;
+  color: #111;
+}
+
+/* ============================= */
+/*         RESPONSIVE            */
+/* ============================= */
+@media (max-width: 992px) {
+  .services-grid,
+  .why-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section,
+  .about-preview {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-content h1 {
+    font-size: 30px;
+  }
+
+  .services-grid,
+  .why-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .invest-btn,
+  .cta-btn {
+    width: 100%;
+    max-width: 280px;
+    margin: 15px auto 0;
+  }
+
+  .hero-image img,
+  .about-image img {
+    max-width: 300px;  /* 🔥 smaller on mobile */
+  }
+}
