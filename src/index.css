@@ -4,7 +4,6 @@
   box-sizing: border-box;
 }
 /* Import modern font */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
 
 .location-card {
   background: linear-gradient(
